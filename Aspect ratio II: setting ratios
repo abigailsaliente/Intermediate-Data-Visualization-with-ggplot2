@@ -1,0 +1,10 @@
+Part 1
+
+# Fix the aspect ratio to 1:1
+sun_plot +
+  coord_fixed(ratio= 1:1)
+
+Part 2
+# Change the aspect ratio to 20:1
+sun_plot +
+  coord_fixed(ratio= 20)
