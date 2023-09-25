@@ -1,0 +1,19 @@
+Part 1
+# Produce a scatter plot of brainwt vs. bodywt
+ggplot(msleep, aes(bodywt, brainwt)) +
+  geom_point() +
+  ggtitle("Raw Values")
+
+Part 2
+# Add scale_*_*() functions
+ggplot(msleep, aes(bodywt, brainwt)) +
+  geom_point() +
+  scale_x_log10() +
+  scale_y_log10() +
+  ggtitle("Scale_ functions")
+
+Part 3
+# Perform a log10 coordinate system transformation
+ggplot(msleep, aes(bodywt, brainwt)) +
+  geom_point() +
+  coord_trans("log10", "log10")
