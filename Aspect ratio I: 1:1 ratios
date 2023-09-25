@@ -1,0 +1,6 @@
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_jitter() +
+  geom_smooth(method = "lm", se = FALSE) +
+  # Fix the coordinate ratio
+  coord_fixed(ratio=1)
+
