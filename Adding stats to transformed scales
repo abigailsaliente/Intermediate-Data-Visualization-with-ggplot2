@@ -1,0 +1,18 @@
+Part 1
+# Plot with a scale_*_*() function:
+ggplot(msleep, aes(bodywt, brainwt)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  # Add a log10 x scale
+  scale_x_log10() +
+  # Add a log10 y scale
+  scale_y_log10() +
+  ggtitle("Scale functions")
+
+Part 2
+# Plot with transformed coordinates
+ggplot(msleep, aes(bodywt, brainwt)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  # Add a log10 coordinate transformation for x and y axes
+  coord_trans("log10","log10")
