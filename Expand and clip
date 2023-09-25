@@ -1,0 +1,16 @@
+Part 1
+
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point(size = 2) +
+  # Add Cartesian coordinates with zero expansion
+  coord_cartesian(expand=0) +
+  theme_classic()
+
+Part 2
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point(size = 2) +
+  # Turn clipping off
+  coord_cartesian(expand = 0, clip= "off") +
+  theme_classic() +
+  # Remove axis lines
+theme(axis.line = element_blank())
