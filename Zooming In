@@ -1,0 +1,14 @@
+Part 1
+# Run the code, view the plot, then update it
+ggplot(mtcars, aes(x = wt, y = hp, color = fam)) +
+  geom_point() +
+  geom_smooth() +
+  # Add a continuous x scale with x limits from 3 to 6
+  scale_x_continuous(limits = c(3, 6))
+
+Part 2
+ggplot(mtcars, aes(x = wt, y = hp, color = fam)) +
+  geom_point() +
+  geom_smooth() +
+  # Add Cartesian coordinates with x limits from 3 to 6
+    coord_cartesian(xlim = c(3, 6))
